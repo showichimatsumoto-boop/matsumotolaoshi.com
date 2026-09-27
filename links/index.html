@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#D5E9EA">
+<title>松本彰一 Showichi Matsumoto</title>
+<meta name="description" content="個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://matsumotolaoshi.com/links/">
+<meta property="og:title" content="松本彰一 Showichi Matsumoto">
+<meta property="og:description" content="個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="ja_JP">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233FA9B8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@600&display=swap">
+<style>
+  :root {
+    --bg: #D5E9EA;
+    --main: #3FA9B8;
+    --ink: #1A2440;
+    --gold: #D4A84B;
+    color-scheme: only light;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: "Noto Sans TC", "PingFang TC", "Hiragino Sans", sans-serif;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: calc(env(safe-area-inset-top) + 16px) calc(env(safe-area-inset-right) + 20px) calc(env(safe-area-inset-bottom) + 24px) calc(env(safe-area-inset-left) + 20px);
+  }
+  html[lang="ja"] body { font-family: "Noto Sans JP", "Hiragino Sans", sans-serif; }
+
+  .lang {
+    display: flex; justify-content: flex-end; gap: 4px;
+    max-width: 480px; margin: 0 auto;
+    font-size: 13px;
+  }
+  .lang button {
+    font: inherit; color: var(--ink); background: none; border: 0;
+    padding: 10px 8px; min-height: 44px; cursor: pointer; opacity: .55;
+  }
+  .lang button[aria-pressed="true"] { opacity: 1; font-weight: 500; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 6px; }
+  .lang span { align-self: center; opacity: .35; }
+
+  main { max-width: 480px; margin: 0 auto; }
+  header { text-align: center; padding: 40px 0 32px; }
+  h1 {
+    font-family: "Noto Serif TC", serif; font-weight: 600;
+    font-size: 34px; letter-spacing: .12em; line-height: 1.3;
+  }
+  .roman { font-size: 13px; letter-spacing: .18em; margin-top: 4px; opacity: .75; }
+  .rule { width: 40px; height: 1px; background: var(--gold); margin: 20px auto; }
+  .title { font-size: 14px; word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
+  .tagline { font-size: 15px; margin-top: 12px; color: var(--main); font-weight: 500; }
+
+  nav { display: flex; flex-direction: column; gap: 12px; }
+  nav a {
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    width: 100%; min-height: 56px; padding: 12px 20px;
+    border: 1.5px solid var(--main); border-radius: 8px;
+    color: var(--ink); background: transparent;
+    font-size: 16px; font-weight: 500; text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color .15s;
+  }
+  nav a:active { background: rgba(63, 169, 184, .12); }
+  nav a.primary { background: var(--main); color: #fff; }
+  nav a.primary:active { background: #3597a5; }
+  nav a:focus-visible, .lang button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  footer { text-align: center; margin-top: 40px; font-size: 13px; }
+  footer .rule { width: 24px; margin: 0 auto 16px; }
+  footer a { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="lang" role="group" aria-label="Language">
+  <button type="button" data-set="zh-Hant">中文</button><span>/</span><button type="button" data-set="ja">日本語</button>
+</div>
+<main>
+  <header>
+    <h1>松本彰一</h1>
+    <p class="roman">Showichi Matsumoto</p>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="title" data-t="title"></p>
+    <p class="tagline" data-t="tagline"></p>
+  </header>
+  <nav id="links"></nav>
+  <footer>
+    <div class="rule" aria-hidden="true"></div>
+    <p><span data-t="contact"></span> <a href="mailto:showichi.matsumoto@gmail.com">showichi.matsumoto@gmail.com</a></p>
+  </footer>
+</main>
+<script>
+(function () {
+  // URLが空欄(TODO)のボタンは表示しない
+  var LINKS = [
+    { url: { "zh-Hant": "", ja: "" }, primary: true,
+      label: { "zh-Hant": "加入 LINE 好友", ja: "LINEで友だち追加" } },
+    { url: "",
+      label: { "zh-Hant": "認識個性心理學", ja: "個性心理學を知る" } },
+    { url: "",
+      label: { "zh-Hant": "《你是什麼動物角色？》購書", ja: "著書『你是什麼動物角色?』(台湾で発売中)" } },
+    { url: "",
+      label: { "zh-Hant": "預約 神樂 Kagura(台中)", ja: "神樂 Kagura を予約(台中)" } },
+    { url: "",
+      label: { "zh-Hant": "預約 MARICO(台北)", ja: "MARICO を予約(台北)" } },
+    { url: "https://www.instagram.com/matsumoto_laoshi/",
+      label: { "zh-Hant": "Instagram @matsumoto_laoshi", ja: "Instagram @matsumoto_laoshi" } }
+  ];
+  var TEXT = {
+    "zh-Hant": {
+      title: "個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者",
+      tagline: "理解，是讓彼此輕鬆的開始。",
+      contact: "合作・演講邀約"
+    },
+    ja: {
+      title: "個性心理學® 七夕支局 支局長｜『你是什麼動物角色?』著者",
+      tagline: "わかると、人は軽くなる。",
+      contact: "取材・講演のご依頼"
+    }
+  };
+
+  function render(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-t]").forEach(function (el) {
+      el.textContent = TEXT[lang][el.getAttribute("data-t")];
+    });
+    var nav = document.getElementById("links");
+    nav.textContent = "";
+    LINKS.forEach(function (l) {
+      var url = typeof l.url === "string" ? l.url : l.url[lang];
+      if (!url) return;
+      var a = document.createElement("a");
+      a.href = url;
+      a.rel = "noopener";
+      if (l.primary) a.className = "primary";
+      a.textContent = l.label[lang];
+      nav.appendChild(a);
+    });
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === lang));
+    });
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  var lang = TEXT[saved] ? saved
+    : /^ja/i.test(navigator.language || "") ? "ja" : "zh-Hant";
+
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var next = b.getAttribute("data-set");
+      try { localStorage.setItem("lang", next); } catch (e) {}
+      render(next);
+    });
+  });
+  render(lang);
+})();
+</script>
+</body>
+</html>

@@ -1,168 +1,317 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="only light">
-<meta name="theme-color" content="#D5E9EA">
 <title>松本彰一 Showichi Matsumoto</title>
 <meta name="description" content="個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者">
-<meta property="og:type" content="profile">
-<meta property="og:url" content="https://matsumotolaoshi.com/links/">
-<meta property="og:title" content="松本彰一 Showichi Matsumoto">
-<meta property="og:description" content="個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者">
-<meta property="og:locale" content="zh_TW">
-<meta property="og:locale:alternate" content="ja_JP">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233FA9B8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Noto+Serif+TC:wght@500;700&family=Shippori+Mincho:wght@500&display=swap">
 <style>
-  :root {
-    --bg: #D5E9EA;
-    --main: #3FA9B8;
-    --ink: #1A2440;
-    --gold: #D4A84B;
-    color-scheme: only light;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: var(--bg); color: var(--ink); }
-  body {
-    font-family: "Noto Sans TC", "PingFang TC", "Hiragino Sans", sans-serif;
-    line-height: 1.7;
-    -webkit-text-size-adjust: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: calc(env(safe-area-inset-top) + 16px) calc(env(safe-area-inset-right) + 20px) calc(env(safe-area-inset-bottom) + 24px) calc(env(safe-area-inset-left) + 20px);
-  }
-  html[lang="ja"] body { font-family: "Noto Sans JP", "Hiragino Sans", sans-serif; }
+:root{--paper:#F3F4EF;--ink:#0F2A33;--mute:#56666B;--red:#B8453F;--teal:#007A8F;--soft:#E3EAE8;--block:#D3DEDC;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0E1E24;--ink:#E8EEEC;--mute:#9FB2B5;--red:#C4524C;--teal:#007A8F;--soft:#15292F;--block:#1E363D}}
+:root[data-theme="dark"]{--paper:#0E1E24;--ink:#E8EEEC;--mute:#9FB2B5;--red:#C4524C;--teal:#007A8F;--soft:#15292F;--block:#1E363D}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Hiragino Sans",sans-serif;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.serif{font-family:"Noto Serif TC","Songti TC",serif}
+.wrap{max-width:560px;margin:0 auto}
 
-  .lang {
-    display: flex; justify-content: flex-end; gap: 4px;
-    max-width: 480px; margin: 0 auto;
-    font-size: 13px;
-  }
-  .lang button {
-    font: inherit; color: var(--ink); background: none; border: 0;
-    padding: 10px 8px; min-height: 44px; cursor: pointer; opacity: .55;
-  }
-  .lang button[aria-pressed="true"] { opacity: 1; font-weight: 500; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 6px; }
-  .lang span { align-self: center; opacity: .35; }
+/* scroll scenes: photo stays, words pass over it */
+.scene{position:relative;height:230vh;height:230svh;background:#111}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.stage img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);will-change:transform}
+.dim{position:absolute;inset:0;background:#0F2A33;opacity:.12}
+.over{position:relative;margin-top:-100vh;margin-top:-100svh;color:#fff;padding:0 24px}
+.over p{margin:0;text-shadow:0 1px 3px rgba(15,42,51,.55),0 2px 18px rgba(15,42,51,.5)}
+.bar{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:14px}
+.bar .name{font-family:"Noto Serif TC",serif;font-weight:700;letter-spacing:.08em}
+.lang{display:flex;gap:10px}
+.lang a{text-decoration:none;opacity:.7}.lang a[aria-current]{opacity:1;font-weight:700}
+.q{display:inline-block;background:rgba(15,42,51,.72);padding:8px 16px;font-family:"Noto Serif TC",serif;font-weight:500;font-size:clamp(26px,7.4vw,34px);line-height:1.4}
+.a{font-family:"Noto Serif TC",serif;font-weight:700;font-size:clamp(38px,11vw,56px);line-height:1.3}
 
-  main { max-width: 480px; margin: 0 auto; }
-  header { text-align: center; padding: 40px 0 32px; }
-  h1 {
-    font-family: "Noto Serif TC", serif; font-weight: 600;
-    font-size: 34px; letter-spacing: .12em; line-height: 1.3;
-  }
-  .roman { font-size: 13px; letter-spacing: .18em; margin-top: 4px; opacity: .75; }
-  .rule { width: 40px; height: 1px; background: var(--gold); margin: 20px auto; }
-  .title { font-size: 14px; word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
-  .tagline { font-size: 15px; margin-top: 12px; color: var(--main); font-weight: 500; }
+.intro{padding:48px 24px 40px}
+.intro .nm{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.intro .nm b{font-family:"Noto Serif TC",serif;font-size:26px}
+.intro .nm span{font-size:13px;color:var(--mute);letter-spacing:.04em}
+.intro p{margin:10px 0 0;font-size:15px}
+.intro .line{color:var(--mute)}
 
-  nav { display: flex; flex-direction: column; gap: 12px; }
-  nav a {
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    width: 100%; min-height: 56px; padding: 12px 20px;
-    border: 1.5px solid var(--main); border-radius: 8px;
-    color: var(--ink); background: transparent;
-    font-size: 16px; font-weight: 500; text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: background-color .15s;
-  }
-  nav a:active { background: rgba(63, 169, 184, .12); }
-  nav a.primary { background: var(--main); color: #fff; }
-  nav a.primary:active { background: #3597a5; }
-  nav a:focus-visible, .lang button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.video{padding:0 24px 56px}
+.video .frame{position:relative;aspect-ratio:4/5;overflow:hidden}
+.video img{width:100%;height:100%;object-fit:cover}
+.play{position:absolute;left:20px;bottom:20px;width:64px;height:64px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.video .cap{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:10px}
 
-  footer { text-align: center; margin-top: 40px; font-size: 13px; }
-  footer .rule { width: 24px; margin: 0 auto 16px; }
-  footer a { color: var(--ink); }
+.doors h2{margin:0;padding:0 24px 20px;font-size:26px}
+.door{position:sticky;top:0;display:block;height:100vh;height:100svh;overflow:hidden;text-decoration:none;color:#fff;box-shadow:0 -14px 40px rgba(0,0,0,.28)}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.door .shade{position:absolute;inset:0;background:#0F2A33;opacity:.16}
+.door .txt{position:absolute;left:16px;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));min-height:330px;padding:22px 20px 24px;background:rgba(15,42,51,.8);box-shadow:0 18px 40px rgba(15,42,51,.35)}
+.door .who{display:inline-block;background:var(--teal);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;letter-spacing:.06em}
+.door .hook{font-family:"Noto Serif TC",serif;font-weight:700;font-size:24px;line-height:1.5;margin:14px 0 8px}
+.door .sub{font-size:14px;opacity:.92;margin:0}
+.door .go{display:inline-flex;align-items:center;gap:8px;min-height:46px;margin-top:18px;padding:0 18px;background:#fff;color:#0F2A33;font-size:15px;font-weight:700}
+.dwell{height:28vh;height:28svh}
+
+.proof{position:relative;z-index:2;background:var(--teal);color:#fff;padding:48px 24px;box-shadow:0 -14px 40px rgba(15,42,51,.28)}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nums b{display:block;font-family:"Noto Serif TC",serif;font-size:36px;line-height:1.1}
+.nums span{font-size:12px}
+.talks{margin:32px 0 0;padding:0;list-style:none;font-size:14px}
+.talks li{display:flex;gap:16px;padding:12px 0;border-top:1px solid rgba(255,255,255,.4)}
+.talks li:last-child{border-bottom:1px solid rgba(255,255,255,.4)}
+.talks time{width:66px;flex-shrink:0}
+
+.course{display:flex;gap:14px;align-items:center;margin-top:28px;text-decoration:none}
+.course .thumb{position:relative;width:128px;flex-shrink:0;aspect-ratio:16/9}
+.course .thumb img{width:100%;height:100%;object-fit:cover}
+.course .pl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35)}
+.course .ct{font-size:14px;line-height:1.6}
+.course small{display:block;font-size:12px}
+.book{padding:0 24px 64px;overflow:hidden}
+.cover{display:block}
+.bookshot{margin:0 -24px;aspect-ratio:4/5;overflow:hidden}
+.bookshot img{width:100%;height:112%;object-fit:cover;margin-top:-6%;will-change:transform}
+.shotcap{margin:12px 0 0;font-size:13px;color:var(--mute)}
+.bookhead{display:flex;gap:16px;align-items:center;margin-top:28px}
+.bookhead .cover{width:108px;flex-shrink:0}
+.bookhead h2{margin:0 0 6px!important;font-size:22px!important;line-height:1.4}
+.book h2{margin:20px 0 4px;font-size:26px}
+.book .meta{font-size:13px;color:var(--mute);margin:0}
+.btn{display:inline-flex;align-items:center;height:50px;padding:0 22px;border:1.5px solid var(--ink);text-decoration:none;font-weight:500;font-size:15px;margin-top:18px}
+.making{display:flex;gap:14px;align-items:center;margin-top:28px;font-size:13px;color:var(--mute)}
+.making img{width:96px;height:96px;object-fit:cover;flex-shrink:0}
+
+.earth{height:240vh;height:240svh}
+.earth .a{font-size:clamp(30px,8.4vw,44px)}
+.strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 24px 56px;-webkit-overflow-scrolling:touch}
+.strip div{flex:0 0 68%;aspect-ratio:3/4;scroll-snap-align:start;background:var(--block);display:flex;align-items:flex-end;padding:12px;font-size:13px;color:var(--ink)}
+
+.strip .ph{flex:0 0 68%;aspect-ratio:3/4;scroll-snap-align:start;margin:0;position:relative;overflow:hidden}
+.strip .ph img{width:100%;height:100%;object-fit:cover}
+.strip .ph figcaption{position:absolute;left:12px;bottom:10px;font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:#fff;text-shadow:0 1px 8px rgba(15,42,51,.7)}
+.earths{position:relative}
+.ecard{position:sticky;top:0;height:100vh;height:100svh;margin:0;overflow:hidden;background:#0F2A33;box-shadow:0 -14px 40px rgba(15,42,51,.28)}
+.ecard img,.ecard video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ecard figcaption{position:absolute;left:24px;bottom:calc(92px + env(safe-area-inset-bottom,0px));font-family:"Noto Serif TC",serif;font-weight:700;font-size:64px;line-height:1;color:#fff;text-shadow:0 2px 16px rgba(15,42,51,.6)}
+.skyline{position:absolute;left:24px;right:24px;top:14%;margin:0;font-family:"Noto Serif TC",serif;font-weight:700;font-size:clamp(30px,8.4vw,44px);line-height:1.3;color:#fff;text-shadow:0 1px 3px rgba(15,42,51,.55),0 2px 18px rgba(15,42,51,.5)}
+.egrid{position:absolute;left:50%;top:calc(50% - 30px);transform:translate(-50%,-50%);width:min(calc(100% - 48px),calc((100svh - 170px) * .49));display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.et{opacity:0;will-change:transform,opacity}
+.et{margin:0;position:relative;aspect-ratio:3/4;overflow:hidden;box-shadow:0 12px 30px rgba(15,42,51,.35)}
+.et img{width:100%;height:100%;object-fit:cover;display:block}
+.et figcaption{position:absolute;left:10px;bottom:6px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:30px;color:#fff;text-shadow:0 0 2px rgba(15,42,51,.9),0 1px 4px rgba(15,42,51,.8),0 2px 14px rgba(15,42,51,.7)}
+.team{margin:-48px -24px 26px;position:relative}
+.team img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.team figcaption{position:absolute;left:16px;bottom:12px;font-size:13px;font-weight:700;color:#fff;text-shadow:0 1px 6px rgba(15,42,51,.8)}
+:root[lang="ja"] body{font-family:"Noto Sans JP","Hiragino Sans",sans-serif}
+:root[lang="ja"] .serif,:root[lang="ja"] .a,:root[lang="ja"] .q,:root[lang="ja"] .door .hook,:root[lang="ja"] .intro .nm b,:root[lang="ja"] .bar .name,:root[lang="ja"] .nums b,:root[lang="ja"] .book h2,:root[lang="ja"] .et figcaption,:root[lang="ja"] .doors h2{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif}
+.contact{background:var(--teal);color:#fff;padding:48px 24px calc(40px + env(safe-area-inset-bottom,0px))}
+.line-btn{display:flex;align-items:center;justify-content:center;height:58px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.08em}
+.row{display:flex;justify-content:space-between;gap:12px;padding:16px 2px;border-bottom:1px solid rgba(255,255,255,.55);text-decoration:none;font-size:14px}
+.row span:last-child{color:#fff}
+.sub-h{margin:32px 0 0;font-size:12px;font-weight:700;letter-spacing:.12em}
+.bye{display:flex;justify-content:space-between;align-items:flex-end;margin-top:40px}
+.contact .sign{background:#fff}
+.sign{width:230px;aspect-ratio:640/144;background:var(--ink);-webkit-mask:url(assets/f9d9f8f4e3.png) no-repeat center/contain;mask:url(assets/f9d9f8f4e3.png) no-repeat center/contain}
+.bye .mata{font-family:"Shippori Mincho",serif;font-size:24px}
+.hint{position:fixed;right:20px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:21;display:flex;flex-direction:column;align-items:center;color:#fff;filter:drop-shadow(0 1px 3px rgba(15,42,51,.7));transition:opacity .3s ease}
+.hint.gone{opacity:0;pointer-events:none}
+.hint svg{display:block;margin-top:-9px;opacity:.15;animation:blink 1.5s ease-in-out infinite}
+.hint svg:nth-child(1){margin-top:0}
+.hint svg:nth-child(2){animation-delay:.2s}
+.hint svg:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:.15}40%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.hint svg{animation:none;opacity:.9}}
+.float-line{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(243,244,239,.94);box-shadow:0 -6px 20px rgba(15,42,51,.12);transform:translateY(110%);transition:transform .35s ease}
+.float-line.show{transform:none}
+.float-line a{display:flex;align-items:center;justify-content:center;max-width:528px;margin:0 auto;height:52px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.08em}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .float-line{background:rgba(14,30,36,.94)}}
+:root[data-theme="dark"] .float-line{background:rgba(14,30,36,.94)}
+@media (prefers-reduced-motion: reduce){.float-line{transition:none}}
+@media (prefers-reduced-motion: reduce){.stage img,.bookshot img{transform:none!important}}
 </style>
+<link rel="canonical" href="https://matsumotolaoshi.com/links/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="松本彰一 Showichi Matsumoto">
+<meta property="og:description" content="「你住日本，還是台灣？」「嗯……地球吧（笑）」個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者">
+<meta property="og:url" content="https://matsumotolaoshi.com/links/">
+<meta property="og:image" content="https://matsumotolaoshi.com/links/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F4EF">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://matsumotolaoshi.com/#person", "name": "松本彰一", "alternateName": ["Showichi Matsumoto", "松本老師"], "url": "https://matsumotolaoshi.com/links/", "image": "https://matsumotolaoshi.com/links/assets/og.jpg", "jobTitle": "個性心理學® 七夕支局 支局長", "description": "日本と台湾を拠点に、個性心理學・美容・不動産を通して人の自己理解を支える。《你是什麼動物角色？》著者。", "worksFor": [{"@type": "Organization", "name": "個性心理學® 七夕支局"}, {"@type": "Organization", "name": "台灣愛連股份有限公司"}], "knowsLanguage": ["ja", "zh-Hant"], "email": "mailto:showichi.matsumoto@gmail.com", "sameAs": ["https://www.instagram.com/matsumoto_laoshi/"]}, {"@type": "Book", "name": "你是什麼動物角色？", "author": {"@id": "https://matsumotolaoshi.com/#person"}, "inLanguage": "zh-Hant", "publisher": {"@type": "Organization", "name": "台灣愛連股份有限公司"}, "isbn": "9786264477406", "offers": {"@type": "Offer", "price": "380", "priceCurrency": "TWD", "url": "https://www.books.com.tw/products/0011059893"}}]}</script>
+<!-- Cloudflare Web Analytics: paste the beacon snippet from the Cloudflare dashboard here -->
 </head>
 <body>
-<div class="lang" role="group" aria-label="Language">
-  <button type="button" data-set="zh-Hant">中文</button><span>/</span><button type="button" data-set="ja">日本語</button>
+<main class="wrap">
+
+<section class="scene" id="hero" aria-label="開場">
+  <div class="stage"><img src="assets/00dc1dd4d5.jpg" alt="松本彰一，穿著紅色和服笑著" fetchpriority="high"><div class="dim"></div></div>
+  <div class="over">
+    <header class="bar"><span class="name">松本彰一</span><nav class="lang" aria-label="語言"><a href="#" data-lang="zh" aria-current="true">中文</a><a href="#" data-lang="ja">日本語</a></nav></header>
+    <div style="height:52svh"></div>
+    <p><span class="q"><span data-i18n="q">「你住日本，<br>還是台灣？」</span></span></p>
+    <div style="height:48svh"></div>
+    <p class="a"><span data-i18n="a">「嗯……<br>地球吧（笑）」</span></p>
+    <div style="height:60svh"></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="nm"><b>松本彰一</b><span>Showichi Matsumoto</span></div>
+  <p><span data-i18n="roles">個性心理學® 七夕支局 支局長<br>《你是什麼動物角色？》作者</span></p>
+  <p class="line"><span data-i18n="line">往返日本與台灣。用個性心理學、美業與不動產，陪人看懂自己。</span></p>
+</section>
+
+
+
+<section class="doors" aria-labelledby="doors-h">
+  <h2 id="doors-h" class="serif"><span data-i18n="doorsh">「認識松本老師，<br>會有什麼改變？」</span></h2>
+  <a class="door" href="https://lin.ee/zmxIinC" target="_blank" rel="noopener" data-href-zh="https://lin.ee/zmxIinC" data-href-ja="https://lin.ee/5qPEu566">
+    <img src="assets/94ebf0818a.jpg" alt="個性心理學研究所學術大會的演講會場" loading="lazy"><div class="shade"></div>
+    <div class="txt"><span class="who"><span data-i18n="w1">如果你是經營者</span></span>
+      <p class="hook"><span data-i18n="h1">老實說：<br>90分鐘的研修，<br>業績不會因此提升。</span></p>
+      <p class="sub"><span data-i18n="s1">但同事之間會多出新的對話。改變，從小地方開始。</span></p><span class="go"><span data-i18n="g1">企業研修的做法</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></div>
+  </a>
+  <div class="dwell" aria-hidden="true"></div>
+  <a class="door" href="https://lin.ee/zmxIinC" target="_blank" rel="noopener" data-href-zh="https://lin.ee/zmxIinC" data-href-ja="https://lin.ee/5qPEu566">
+    <img src="assets/d3f6cfa6b9.jpg" alt="松本彰一在沙龍為客人進行小顏調整" loading="lazy"><div class="shade"></div>
+    <div class="txt"><span class="who"><span data-i18n="w2">如果你在美業</span></span>
+      <p class="hook"><span data-i18n="h2">同一個商品，<br>其實有三種說法。</span></p>
+      <p class="sub"><span data-i18n="s2">是哪三種？見面時再告訴你。</span></p><span class="go"><span data-i18n="g2">銷售的方法</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></div>
+  </a>
+  <div class="dwell" aria-hidden="true"></div>
+  <a class="door" href="https://lin.ee/zmxIinC" target="_blank" rel="noopener" data-href-zh="https://lin.ee/zmxIinC" data-href-ja="https://lin.ee/5qPEu566">
+    <img src="assets/d8bbb8080f.jpg" alt="松本彰一在講座中翻開教材" loading="lazy"><div class="shade"></div>
+    <div class="txt"><span class="who"><span data-i18n="w3">如果你對個性心理學有興趣</span></span>
+      <p class="hook"><span data-i18n="h3">人，不比較<br>就看不懂自己。</span></p>
+      <p class="sub"><span data-i18n="s3">從比較中加深對自己的理解，和自己相處的方式，也會提升一個層次。</span></p><span class="go"><span data-i18n="g3">從這裡開始</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></div>
+  </a>
+  <div class="dwell" aria-hidden="true"></div>
+  <div class="proof" aria-label="實績">
+  <figure class="team"><img src="assets/e2b1d8018d.jpg" alt="七夕支局的認定講師們" loading="lazy"><figcaption><span data-i18n="team">七夕支局的認定講師們</span></figcaption></figure>
+  <div class="nums"><div><b>17</b><span data-i18n="n1">認定講師</span></div><div><b>200+</b><span data-i18n="n2">學員</span></div><div><b>2023</b><span data-i18n="n3">七夕支局成立</span></div></div>
+  <ul class="talks">
+    <li><time>2026.06</time><span data-i18n="tk0">髮剪處 全國加盟店大會 主題演講（90分鐘）</span></li>
+    <li><time>2026.05</time><span data-i18n="tk1">個性心理學研究所 第10屆學術大會</span></li>
+    <li><time>2026.02</time><span data-i18n="tk2">国際総合ビューティーカレッジ 新年會（日本）</span></li>
+    <li><time>2025.12</time><span data-i18n="tk3">美禅道 演講</span></li>
+    <li><time>2025.09</time><span data-i18n="tk4">国際総合ビューティーカレッジ 演講（日本）</span></li>
+    <li><time>2025.07</time><span data-i18n="tk5">個性心理學研究所 第9屆學術大會</span></li>
+    <li><time>2025.03</time><span data-i18n="tk6">台灣日本人學校 演講</span></li>
+  </ul>
+  <a class="course" href="https://youtu.be/QOY4BOjLmC8" target="_blank" rel="noopener">
+    <span class="thumb"><img src="assets/a0abe20d26.jpg" alt="認定講師講座的上課情形" loading="lazy"><span class="pl"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z" fill="#fff"/></svg></span></span>
+    <span class="ct"><span data-i18n="course">看看認定講師講座的上課情形</span><small>YouTube</small></span>
+  </a>
 </div>
-<main>
-  <header>
-    <h1>松本彰一</h1>
-    <p class="roman">Showichi Matsumoto</p>
-    <div class="rule" aria-hidden="true"></div>
-    <p class="title" data-t="title"></p>
-    <p class="tagline" data-t="tagline"></p>
-  </header>
-  <nav id="links"></nav>
-  <footer>
-    <div class="rule" aria-hidden="true"></div>
-    <p><span data-t="contact"></span> <a href="mailto:showichi.matsumoto@gmail.com">showichi.matsumoto@gmail.com</a></p>
-  </footer>
+</section>
+
+
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <figure class="bookshot"><img src="assets/0a05c5ade2.jpg" alt="新書發表會上，松本彰一親筆簽名" loading="lazy"></figure>
+  <p class="shotcap"><span data-i18n="cap">新書發表會，一本一本親筆簽名。</span></p>
+  <div class="bookhead"><img class="cover" src="assets/b7523aa97c.webp" alt="《你是什麼動物角色？》書封" loading="lazy"><div><h2 id="book-h" class="serif">《你是什麼<br>動物角色？》</h2><p class="meta"><span data-i18n="meta">台灣愛連 出版｜NT$380<br>日本個性心理學® 創始人 弦本將裕 監修</span></p></div></div>
+  <a class="btn" href="https://www.books.com.tw/products/0011059893" target="_blank" rel="noopener"><span data-i18n="buy">在博客來購買</span></a>
+  <div class="making"><img src="assets/7d8272d868.jpg" alt="在印刷廠確認書的顏色" loading="lazy"><span><span data-i18n="make">在印刷廠，一頁一頁確認顏色。</span></span></div>
+</section>
+
+<section class="scene earth" aria-label="地球" data-base="0.1">
+  <div class="stage"><img src="assets/61d3237dca.jpg" alt="從飛機窗外看到的地平線與雲海" loading="lazy"><div class="dim"></div><div class="egrid"><figure class="et"><img src="assets/f0d035795d.jpg" alt="穿過樹梢的陽光與石像" loading="lazy"><figcaption>日</figcaption></figure><figure class="et"><img src="assets/f1dfd04540.jpg" alt="滿月" loading="lazy"><figcaption>月</figcaption></figure><figure class="et"><img src="assets/3fe0dedc4a.jpg" alt="山" loading="lazy"><figcaption>山</figcaption></figure><figure class="et"><img src="assets/3fc3afa181.jpg" alt="在瀑布下合掌修行的松本彰一" loading="lazy"><figcaption>水</figcaption></figure><figure class="et"><img src="assets/bc141930bc.jpg" alt="營火" loading="lazy"><figcaption>火</figcaption></figure><figure class="et"><img src="assets/71c71d3f46.jpg" alt="松本彰一在海邊散步" loading="lazy"><figcaption>海</figcaption></figure></div></div>
+  <div class="over">
+    <div style="height:16svh"></div>
+    <p class="a"><span data-i18n="earth">日本、台灣，<br>都在同一個<br>地球上。</span></p>
+    <div style="height:10svh"></div>
+  </div>
+</section>
+
+<section class="contact" aria-label="聯絡">
+  <a class="line-btn" href="https://lin.ee/zmxIinC" target="_blank" rel="noopener" data-href-zh="https://lin.ee/zmxIinC" data-href-ja="https://lin.ee/5qPEu566"><span data-i18n="lineb">加入 LINE 好友</span></a>
+  <a class="row" href="mailto:showichi.matsumoto@gmail.com?subject=%E6%BC%94%E8%AC%9B%E3%83%BB%E5%90%88%E4%BD%9C%E9%82%80%E7%B4%84%EF%BC%88%E4%BE%86%E8%87%AA%20matsumotolaoshi.com%EF%BC%89" data-href-zh="mailto:showichi.matsumoto@gmail.com?subject=%E6%BC%94%E8%AC%9B%E3%83%BB%E5%90%88%E4%BD%9C%E9%82%80%E7%B4%84%EF%BC%88%E4%BE%86%E8%87%AA%20matsumotolaoshi.com%EF%BC%89" data-href-ja="mailto:showichi.matsumoto@gmail.com?subject=%E8%AC%9B%E6%BC%94%E3%83%BB%E5%8F%96%E6%9D%90%E3%83%BB%E5%8D%94%E6%A5%AD%E3%81%AE%E3%81%94%E4%BE%9D%E9%A0%BC%EF%BC%88matsumotolaoshi.com%E3%82%88%E3%82%8A%EF%BC%89"><span><span data-i18n="mail">演講・合作邀約</span></span><span>showichi.matsumoto@gmail.com</span></a>
+  <a class="row" href="https://www.instagram.com/matsumoto_laoshi/" target="_blank" rel="noopener"><span>Instagram</span><span>@matsumoto_laoshi</span></a>
+  <p class="sub-h"><span data-i18n="brands">相關品牌</span></p>
+  <a class="row" href="https://www.instagram.com/maricotaipei_lash/" target="_blank" rel="noopener"><span>MARICO</span><span><span data-i18n="mar">美睫・日式小顏｜台北</span></span></a>
+  <a class="row" href="https://www.instagram.com/kagura_taichung/" target="_blank" rel="noopener"><span>神樂 KAGURA</span><span><span data-i18n="kag">美・健康・靈性能量｜台中</span></span></a>
+  <a class="row" href="https://www.jlatw.com/" target="_blank" rel="noopener"><span><span data-i18n="jla">JLA 日本美睫協會 台灣分部</span></span><span data-i18n="jlar">分部長</span></a>
+  <div class="bye"><div class="sign" role="img" aria-label="松本彰一 親筆簽名"></div><div class="mata" lang="ja">またね。</div></div>
+</section>
+
 </main>
+<div class="hint" id="hint" aria-hidden="true"><svg width="26" height="18" viewBox="0 0 26 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5l9 8 9-8"/></svg><svg width="26" height="18" viewBox="0 0 26 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5l9 8 9-8"/></svg><svg width="26" height="18" viewBox="0 0 26 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5l9 8 9-8"/></svg></div>
+<div class="float-line" id="floatLine"><a href="https://lin.ee/zmxIinC" target="_blank" rel="noopener" data-href-zh="https://lin.ee/zmxIinC" data-href-ja="https://lin.ee/5qPEu566"><span data-i18n="lineb">加入 LINE 好友</span></a></div>
 <script>
-(function () {
-  // URLが空欄(TODO)のボタンは表示しない
-  var LINKS = [
-    { url: { "zh-Hant": "", ja: "" }, primary: true,
-      label: { "zh-Hant": "加入 LINE 好友", ja: "LINEで友だち追加" } },
-    { url: "",
-      label: { "zh-Hant": "認識個性心理學", ja: "個性心理學を知る" } },
-    { url: "",
-      label: { "zh-Hant": "《你是什麼動物角色？》購書", ja: "著書『你是什麼動物角色?』(台湾で発売中)" } },
-    { url: "",
-      label: { "zh-Hant": "預約 神樂 Kagura(台中)", ja: "神樂 Kagura を予約(台中)" } },
-    { url: "",
-      label: { "zh-Hant": "預約 MARICO(台北)", ja: "MARICO を予約(台北)" } },
-    { url: "https://www.instagram.com/matsumoto_laoshi/",
-      label: { "zh-Hant": "Instagram @matsumoto_laoshi", ja: "Instagram @matsumoto_laoshi" } }
-  ];
-  var TEXT = {
-    "zh-Hant": {
-      title: "個性心理學® 七夕支局 支局長｜《你是什麼動物角色？》作者",
-      tagline: "理解，是讓彼此輕鬆的開始。",
-      contact: "合作・演講邀約"
-    },
-    ja: {
-      title: "個性心理學® 七夕支局 支局長｜『你是什麼動物角色?』著者",
-      tagline: "わかると、人は軽くなる。",
-      contact: "取材・講演のご依頼"
-    }
-  };
-
-  function render(lang) {
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-t]").forEach(function (el) {
-      el.textContent = TEXT[lang][el.getAttribute("data-t")];
-    });
-    var nav = document.getElementById("links");
-    nav.textContent = "";
-    LINKS.forEach(function (l) {
-      var url = typeof l.url === "string" ? l.url : l.url[lang];
-      if (!url) return;
-      var a = document.createElement("a");
-      a.href = url;
-      a.rel = "noopener";
-      if (l.primary) a.className = "primary";
-      a.textContent = l.label[lang];
-      nav.appendChild(a);
-    });
-    document.querySelectorAll(".lang button").forEach(function (b) {
-      b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === lang));
-    });
+(function(){
+  var I18N = {"q": {"zh": "「你住日本，<br>還是台灣？」", "ja": "「日本と台湾、<br>どちらに<br>お住まいですか？」"}, "a": {"zh": "「嗯……<br>地球吧（笑）」", "ja": "「う〜ん、<br>地球ですかね（笑）」"}, "roles": {"zh": "個性心理學® 七夕支局 支局長<br>《你是什麼動物角色？》作者", "ja": "個性心理學® 七夕支局 支局長<br>『你是什麼動物角色？』著者"}, "line": {"zh": "往返日本與台灣。用個性心理學、美業與不動產，陪人看懂自己。", "ja": "日本と台湾を行き来しながら、個性心理學・美容・不動産を通して、人が自分を知るお手伝いをしています。"}, "doorsh": {"zh": "「認識松本老師，<br>會有什麼改變？」", "ja": "「松本さんと出会うと、<br>何が変わるんですか？」"}, "w1": {"zh": "如果你是經營者", "ja": "経営者の方なら"}, "h1": {"zh": "老實說：<br>90分鐘的研修，<br>業績不會因此提升。", "ja": "正直に言いますね。<br>90分の研修で、<br>売上は上がりません。"}, "s1": {"zh": "但同事之間會多出新的對話。改變，從小地方開始。", "ja": "でも社員同士の新しい会話が増えます。変化は小さな所から始まります。"}, "g1": {"zh": "企業研修的做法", "ja": "企業研修について"}, "w2": {"zh": "如果你在美業", "ja": "美容のお仕事なら"}, "h2": {"zh": "同一個商品，<br>其實有三種說法。", "ja": "同じ商品でも、<br>伝え方は3つあるんです。"}, "s2": {"zh": "是哪三種？見面時再告訴你。", "ja": "どの3つか？ それはお会いしたときに。"}, "g2": {"zh": "銷售的方法", "ja": "売り方について"}, "w3": {"zh": "如果你對個性心理學有興趣", "ja": "個性心理學が気になるなら"}, "h3": {"zh": "人，不比較<br>就看不懂自己。", "ja": "人は、比較しないと<br>わからないんです。"}, "s3": {"zh": "從比較中加深對自己的理解，和自己相處的方式，也會提升一個層次。", "ja": "比較から自己理解が深まり、自分との付き合い方が一段階上がります。"}, "g3": {"zh": "從這裡開始", "ja": "ここから始める"}, "team": {"zh": "七夕支局的認定講師們", "ja": "七夕支局の認定講師たち"}, "n1": {"zh": "認定講師", "ja": "認定講師"}, "n2": {"zh": "學員", "ja": "受講生"}, "n3": {"zh": "七夕支局成立", "ja": "七夕支局 設立"}, "course": {"zh": "看看認定講師講座的上課情形", "ja": "認定講師講座の様子を見る"}, "cap": {"zh": "新書發表會，一本一本親筆簽名。", "ja": "出版記念会で、一冊ずつ直筆サイン。"}, "meta": {"zh": "台灣愛連 出版｜NT$380<br>日本個性心理學® 創始人 弦本將裕 監修", "ja": "台灣愛連 出版｜NT$380<br>個性心理學® 創始者 弦本將裕 監修"}, "buy": {"zh": "在博客來購買", "ja": "博客來（台湾）で見る"}, "make": {"zh": "在印刷廠，一頁一頁確認顏色。", "ja": "印刷所で、一ページずつ色を確認。"}, "earth": {"zh": "日本、台灣，<br>都在同一個<br>地球上。", "ja": "日本も、台湾も、<br>同じ一つの<br>地球の上。"}, "lineb": {"zh": "加入 LINE 好友", "ja": "LINEで友だち追加"}, "mail": {"zh": "演講・合作邀約", "ja": "講演・取材・協業のご依頼"}, "brands": {"zh": "相關品牌", "ja": "関連ブランド"}, "mar": {"zh": "美睫・日式小顏｜台北", "ja": "まつげ・日式小顔｜台北"}, "kag": {"zh": "美・健康・靈性能量｜台中", "ja": "美・健康・スピリチュアル｜台中"}, "jla": {"zh": "JLA 日本美睫協會 台灣分部", "ja": "JLA 日本まつげ協会 台湾支部"}, "jlar": {"zh": "分部長", "ja": "支部長"}, "tk0": {"zh": "髮剪處 全國加盟店大會 主題演講（90分鐘）", "ja": "髮剪處 全国加盟店大会 基調講演（90分）"}, "tk1": {"zh": "個性心理學研究所 第10屆學術大會", "ja": "個性心理學研究所 第10回学術大会"}, "tk2": {"zh": "国際総合ビューティーカレッジ 新年會（日本）", "ja": "国際総合ビューティーカレッジ 新年会"}, "tk3": {"zh": "美禅道 演講", "ja": "美禅道 講演"}, "tk4": {"zh": "国際総合ビューティーカレッジ 演講（日本）", "ja": "国際総合ビューティーカレッジ 講演"}, "tk5": {"zh": "個性心理學研究所 第9屆學術大會", "ja": "個性心理學研究所 第9回学術大会"}, "tk6": {"zh": "台灣日本人學校 演講", "ja": "台湾日本人学校 講演"}};
+  function setLang(l){
+    document.documentElement.lang = (l === 'ja') ? 'ja' : 'zh-Hant';
+    [].forEach.call(document.querySelectorAll('[data-i18n]'), function(el){ var v = I18N[el.getAttribute('data-i18n')]; if (v) el.innerHTML = v[l]; });
+    [].forEach.call(document.querySelectorAll('[data-href-zh]'), function(a){ a.href = a.getAttribute('data-href-' + l); });
+    [].forEach.call(document.querySelectorAll('[data-lang]'), function(a){ if (a.getAttribute('data-lang') === l) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+    try { localStorage.setItem('lang', l); } catch (e) {}
   }
-
-  var saved = null;
-  try { saved = localStorage.getItem("lang"); } catch (e) {}
-  var lang = TEXT[saved] ? saved
-    : /^ja/i.test(navigator.language || "") ? "ja" : "zh-Hant";
-
-  document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var next = b.getAttribute("data-set");
-      try { localStorage.setItem("lang", next); } catch (e) {}
-      render(next);
+  [].forEach.call(document.querySelectorAll('[data-lang]'), function(a){ a.addEventListener('click', function(e){ e.preventDefault(); setLang(a.getAttribute('data-lang')); }); });
+  var saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+  setLang(saved || ((navigator.language || '').toLowerCase().indexOf('ja') === 0 ? 'ja' : 'zh'));
+  var hint = document.getElementById('hint');
+  function hideHint(){ if (window.scrollY > 8) { hint.classList.add('gone'); window.removeEventListener('scroll', hideHint); } }
+  window.addEventListener('scroll', hideHint, { passive: true });
+  var fl = document.getElementById('floatLine'), hero = document.getElementById('hero'), contact = document.querySelector('.contact');
+  function lineBar(){
+    var vh = window.innerHeight, hb = hero.getBoundingClientRect().bottom, ct = contact.getBoundingClientRect().top;
+    fl.classList.toggle('show', hb < vh * 0.5 && ct > vh);
+  }
+  window.addEventListener('scroll', lineBar, { passive: true }); lineBar();
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var scenes = [].slice.call(document.querySelectorAll('.scene'));
+  var cover = document.querySelector('.bookshot img');
+  var book = document.getElementById('book');
+  if (reduce) { scenes.forEach(function(s){ s.querySelector('.dim').style.opacity = .6; }); [].forEach.call(document.querySelectorAll('.et'), function(t){ t.style.opacity = 1; }); [].forEach.call(document.querySelectorAll('video[autoplay]'), function(v){ v.pause(); v.removeAttribute('autoplay'); }); return; }
+  var ticking = false;
+  function clamp(v){ return v < 0 ? 0 : (v > 1 ? 1 : v); }
+  function update(){
+    ticking = false;
+    var vh = window.innerHeight;
+    scenes.forEach(function(s){
+      var r = s.getBoundingClientRect();
+      var total = r.height - vh;
+      if (r.bottom < 0 || r.top > vh) return;
+      var p = clamp(-r.top / total);
+      s.querySelector('.stage img').style.transform = 'scale(' + (1.12 - 0.12 * p).toFixed(4) + ')';
+      var base = parseFloat(s.getAttribute('data-base') || '0.15'); s.querySelector('.dim').style.opacity = (base + (0.6 - base) * clamp(p * 1.7)).toFixed(3);
+      var tiles = s.querySelectorAll('.et');
+      for (var i = 0; i < tiles.length; i++) {
+        var k = clamp((p - (0.25 + i * 0.11)) / 0.15);
+        var e = 1 - Math.pow(1 - k, 3);
+        tiles[i].style.opacity = e.toFixed(3);
+        tiles[i].style.transform = 'translateY(' + ((1 - e) * 46).toFixed(1) + 'px) scale(' + (0.9 + 0.1 * e).toFixed(3) + ') rotate(' + ((1 - e) * (i % 2 ? 3 : -3)).toFixed(2) + 'deg)';
+      }
     });
-  });
-  render(lang);
+    if (cover && book) {
+      var b = book.getBoundingClientRect();
+      if (b.bottom > 0 && b.top < vh) {
+        var c = (b.top + b.height / 2 - vh / 2) / vh;
+        cover.style.transform = 'translateY(' + (c * -30).toFixed(1) + 'px)';
+      }
+    }
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
 })();
 </script>
 </body>
